@@ -1,4 +1,5 @@
 {
+  "homepage": "http://sabun123.github.io/yusuf-website",
   "name": "my-website",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,9 +8,12 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "jest",
-    "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
+    "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",

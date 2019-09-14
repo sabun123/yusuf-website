@@ -1,11 +1,12 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
 import './App.css';
+import HomePage from './homepage';
 
 const message = 'Welcome to my-website';
 const App = () => (
   <div className="App">
-    <h1>{message}</h1>
+    <HomePage />
   </div>
 );
 

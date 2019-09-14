@@ -1,0 +1,28 @@
+.Homepage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #222831;
+  }
+.Banner {
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+    max-height: 150px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #1d1f20;
+    border-bottom: 1px solid #d65a31;
+}
+.BannerTitle {
+    color: #d65a31;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-grow: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ImageBanner {
+    height: 150px;
+    display: flex;
+    border-left: 1px solid #d65a31;
+}
