@@ -3,7 +3,6 @@ import React from 'react';
 import './App.css';
 import HomePage from './homepage';
 
-const message = 'Welcome to my-website';
 const App = () => (
   <div className="App">
     <HomePage />
