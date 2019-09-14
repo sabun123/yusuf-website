@@ -1,16 +1,12 @@
-import { Component } from 'react';
+import { hot } from 'react-hot-loader';
+import React from 'react';
 import './App.css';
 
-export default class App extends Component {
-  state = {
-    name: 'my-website',
-  };
+const message = 'Welcome to my-website';
+const App = () => (
+  <div className="App">
+    <h1>{message}</h1>
+  </div>
+);
 
-  render() {
-    return (
-      <div className="App">
-        <h1>Welcome to {this.state.name}</h1>
-      </div>
-    );
-  }
-}
+export default hot(module)(App);
