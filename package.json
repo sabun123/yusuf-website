@@ -13,22 +13,22 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "gh-pages": "^2.1.1",
-    "prop-types": "^15",
-    "react": "^16",
-    "react-dom": "^16",
-    "react-hot-loader": "^4",
+    "gh-pages": "3.1.0",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hot-loader": "4.12.21",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
-    "@neutrinojs/airbnb": "^9.0.0-rc.3",
-    "@neutrinojs/jest": "^9.0.0-rc.3",
-    "@neutrinojs/react": "^9.0.0-rc.3",
-    "eslint": "^5",
-    "jest": "^24",
-    "neutrino": "^9.0.0-rc.3",
-    "webpack": "^4",
-    "webpack-cli": "^3",
-    "webpack-dev-server": "^3"
+    "@neutrinojs/airbnb": "9.3.0",
+    "@neutrinojs/jest": "9.3.0",
+    "@neutrinojs/react": "9.3.0",
+    "eslint": "7.6.0",
+    "jest": "26.4.0",
+    "neutrino": "9.3.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
   }
 }

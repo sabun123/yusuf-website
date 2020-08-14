@@ -1,6 +1,6 @@
-import React from "react";
-import BannerImage from "./assets/IMG_3485.jpg";
-import "./styles.css";
+import React from 'react';
+import BannerImage from './assets/IMG_3485.jpg';
+import './styles.css';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class HomePage extends React.Component {
