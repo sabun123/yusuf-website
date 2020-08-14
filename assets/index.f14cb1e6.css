@@ -49,11 +49,21 @@ body {
     box-shadow: 0px 10px 10px #00000094;
 }
 .BannerTitle {
+	font-family: 'Roboto', sans-serif;
     color: #d65a31;
-    padding-left: 30px;
     padding-right: 30px;
     flex-grow: 1;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.BannerText {
+	font-family: 'Roboto', sans-serif;
+	color: white
+}
+.TitleContainer {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding-left: 30px;
 }
 .ImageBanner {
     height: 150px;
