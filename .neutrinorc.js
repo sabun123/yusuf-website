@@ -10,7 +10,7 @@ module.exports = {
     airbnb(),
     react({
       html: {
-        title: 'my-website'
+        title: "Yusuf"
       }
     }),
     jest(),
