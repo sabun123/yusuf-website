@@ -1,12 +1,25 @@
-import { hot } from 'react-hot-loader';
-import React from 'react';
-import './App.css';
-import HomePage from './homepage';
+import Header from './components/header/header';
+import Home from './components/home/home';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import Navbar from './components/nav/nav';
+import Work from './components/work/work';
+import Footer from './components/footer/footer';
 
-const App = () => (
-  <div className="App">
-    <HomePage />
-  </div>
-);
+function WebContent() {
+  return (
+    <>
+      <div className='bg-circle1'></div>
+      <div className='bg-circle2'></div>
+      <Header />
+      <Navbar />
+      <Home />
 
-export default hot(module)(App);
+      <Work />
+      <About />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+export default WebContent;
