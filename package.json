@@ -4,7 +4,7 @@
   "private": true,
   "description": "Personal portfolio website for Yusuf",
   "author": "Yusuf Ismail bin Shukor",
-  "homepage": "https://sabun123.github.io",
+  "homepage": "https://sabun123.github.io/yusuf-website/",
   "dependencies": {
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",
