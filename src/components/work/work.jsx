@@ -115,7 +115,7 @@ const Work = () => {
           <h1 className='name'>Oh-My-English</h1>
           <h3 className='position'>Mobile Game</h3>
           <h4 className='about'>
-            Developed game levels and mechanices in Unity3D. The 2D mobile game
+            Developed game levels and mechanics in Unity3D. The 2D mobile game
             Oh-My-English was released publicly to the app stores for both
             Android and iOS for Astro. Integrated the game with Facebook's
             mobile leaderboard SDK.
