@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yusuf-website/static/css/main.cd2bb4fd.css",
-    "main.js": "/yusuf-website/static/js/main.c1e3b8ba.js",
+    "main.js": "/yusuf-website/static/js/main.aa132a5b.js",
     "static/media/degree.png": "/yusuf-website/static/media/degree.4ddcebefe0422c81e5eb.png",
     "static/media/profile2.png": "/yusuf-website/static/media/profile2.5de8843a7c5b1e4631f7.png",
     "static/media/work-tm.png": "/yusuf-website/static/media/work-tm.900024c4470d1a805c73.png",
@@ -21,10 +21,10 @@
     "static/media/css.png": "/yusuf-website/static/media/css.cbea6150e2917bd6f0f3.png",
     "index.html": "/yusuf-website/index.html",
     "main.cd2bb4fd.css.map": "/yusuf-website/static/css/main.cd2bb4fd.css.map",
-    "main.c1e3b8ba.js.map": "/yusuf-website/static/js/main.c1e3b8ba.js.map"
+    "main.aa132a5b.js.map": "/yusuf-website/static/js/main.aa132a5b.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2bb4fd.css",
-    "static/js/main.c1e3b8ba.js"
+    "static/js/main.aa132a5b.js"
   ]
 }
