@@ -89,3 +89,8 @@ typings/
 
 # Neutrino build directory
 build
+
+.DS_Store
+
+# Vite build directory
+dist/
