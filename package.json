@@ -4,7 +4,7 @@
   "private": true,
   "description": "Personal portfolio website for Yusuf",
   "author": "Yusuf Ismail bin Shukor",
-  "homepage": "https://yusuf-ismail-shukor.com/",
+  "homepage": "https://yusuf-ismail-shukor.com",
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
