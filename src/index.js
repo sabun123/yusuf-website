@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import './style.css';
-import WebContent from './app';
+import WebContent from './App';
 
 ReactDOM.render(<WebContent />, document.getElementById('root'));
 
