@@ -1,25 +1,18 @@
-import Header from './components/header/header';
-import Home from './components/home/home';
-import About from './components/about/about';
-import Contact from './components/contact/contact';
-import Navbar from './components/nav/nav';
-import Work from './components/work/work';
-import Footer from './components/footer/footer';
+import TopNav from "./components/topnav";
+import BottomNav from "./components/bottomnav";
+import ShowCase from "./components/showcase";
+import ToolShowCase from "./components/toolshowcase";
 
-function WebContent() {
+function App() {
   return (
-    <>
-      <div className='bg-circle1'></div>
-      <div className='bg-circle2'></div>
-      <Header />
-      <Navbar />
-      <Home />
-
-      <Work />
-      <About />
-      <Contact />
-      <Footer />
-    </>
+    <main className="flex flex-col w-full h-screen bg-base-100">
+      <TopNav />
+      <div className="flex flex-col mt-15">
+        <ShowCase />
+        <ToolShowCase />
+      </div>
+      <BottomNav />
+    </main>
   );
 }
-export default WebContent;
+export default App;
