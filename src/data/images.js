@@ -10,7 +10,7 @@ import workBsx from "../assets/projects/work-bsx.png";
 
 import certAws from "../assets/certs/aws.png";
 import certHadoop from "../assets/certs/hadoop.png";
-import certDegree from "../assets/certs/degree.png";
+import certDegree from "../assets/certs/degree.jpg";
 
 export const images = {
   profile: profilePhoto,
