@@ -12,10 +12,10 @@ export const profile = {
   tagline: "Constructor of mobile & web experiences",
   bio: "A mixed coder (half Malaysian, half Australian). Venturing the world and life in search of new technology and the next big advancement for mankind. Always hungry to learn new tech, and climb the ever eternal growth ladder. What's life if not an adventure into the constant unknown!",
   highlights: [
-    "Mobile & Web",
+    "AI",
+    "Cloud (Azure, AWS, Alibaba)",
     "React / React Native",
-    "AI & Cloud (Azure)",
-    "Mobile Games",
+    "Mobile & Web",
   ],
 };
 
@@ -140,8 +140,18 @@ export const pastProjects = [
   },
 ];
 
-// ─── Qualifications ──────────────────────────────────────────────────────────
+// ─── Qualifications (newest first) ───────────────────────────────────────────
 export const qualifications = [
+  {
+    id: "nvidia",
+    title: "NVIDIA-Certified Associate: Generative AI LLMs",
+    period: "Feb 22, 2026 — Feb 22, 2028",
+    image: "nvidia",
+    link: {
+      label: "View badge on Credly",
+      href: "https://www.credly.com/badges/df5cced7-d9dd-475e-8809-fd98727263d8",
+    },
+  },
   { id: "aws", title: "AWS", image: "aws" },
   { id: "hadoop", title: "Hadoop", image: "hadoop" },
   { id: "degree", title: "Degree", image: "degree" },
@@ -172,12 +182,14 @@ export const socials = [
     label: "Blog",
     handle: "techpromad",
     href: "https://techpromad.wordpress.com/",
+    contact: false, // hidden in the contact section (still in hero/footer)
   },
   {
     id: "youtube",
     label: "YouTube",
     handle: "Penguin Recordings",
     href: "https://www.youtube.com/c/PenguinRecordings/featured",
+    contact: false, // hidden in the contact section (still in hero/footer)
   },
 ];
 

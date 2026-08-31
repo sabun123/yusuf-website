@@ -4,6 +4,9 @@ import SectionHeading from "./SectionHeading";
 import { socialIcons } from "./socialIcons";
 
 export default function Contact() {
+  // Blog & YouTube stay on the hero/footer, but out of the contact section
+  const contactSocials = socials.filter((s) => s.contact !== false);
+
   return (
     <section id="contact" className="relative px-6 py-24 md:py-32">
       <div className="mx-auto max-w-5xl">
@@ -17,8 +20,8 @@ export default function Contact() {
           sub="Have a project in mind — mobile, web, AI, or something else entirely? Say hi."
         />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {socials.map((s, i) => {
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {contactSocials.map((s, i) => {
             const Icon = socialIcons[s.id];
             return (
               <Reveal key={s.id} delay={i * 0.08}>

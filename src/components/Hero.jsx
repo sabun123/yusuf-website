@@ -19,20 +19,21 @@ function RotatingRole({ roles }) {
   }, [roles.length, reduced]);
 
   return (
-    <div className="relative h-[1.55em] overflow-hidden">
+    // Font size lives on the wrapper so the em-based height matches the text
+    <div className="relative h-[1.45em] overflow-hidden text-2xl md:text-4xl">
       {reduced ? (
-        <span className="text-gradient font-display text-2xl font-semibold md:text-4xl">
+        <span className="text-gradient block leading-[1.2] font-display font-semibold">
           {roles[0]}
         </span>
       ) : (
         <AnimatePresence mode="wait">
           <motion.span
             key={roles[index]}
-            initial={{ y: "110%", opacity: 0 }}
+            initial={{ y: "125%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "-110%", opacity: 0 }}
+            exit={{ y: "-125%", opacity: 0 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="text-gradient block font-display text-2xl font-semibold md:text-4xl"
+            className="text-gradient block leading-[1.2] font-display font-semibold"
           >
             {roles[index]}
           </motion.span>

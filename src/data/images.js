@@ -11,6 +11,7 @@ import workTm from "../assets/projects/work-tm.png";
 import workOme from "../assets/projects/work-ome.png";
 import workBsx from "../assets/projects/work-bsx.png";
 
+import certNvidia from "../assets/certs/nvidia.png";
 import certAws from "../assets/certs/aws.png";
 import certHadoop from "../assets/certs/hadoop.png";
 import certDegree from "../assets/certs/degree.jpg";
@@ -25,6 +26,7 @@ export const images = {
   "work-tm": workTm,
   "work-ome": workOme,
   "work-bsx": workBsx,
+  nvidia: certNvidia,
   aws: certAws,
   hadoop: certHadoop,
   degree: certDegree,

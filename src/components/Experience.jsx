@@ -5,6 +5,7 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import Tilt from "./Tilt";
 import TechIcon from "./TechIcon";
+import { useLightbox } from "./Lightbox";
 
 function StackChips({ stack }) {
   return (
@@ -82,6 +83,8 @@ function CurrentRoleCard({ role }) {
 }
 
 function ProjectCard({ project, index }) {
+  const { open } = useLightbox();
+  const src = images[project.image];
   return (
     <Reveal delay={(index % 3) * 0.06}>
       <div className="relative pl-10">
@@ -91,31 +94,36 @@ function ProjectCard({ project, index }) {
           className="glass group overflow-hidden rounded-2xl transition-colors duration-500 hover:border-neon-fuchsia/30"
         >
           <div className="grid md:grid-cols-[1fr_1.15fr]">
-            <div className="relative h-52 overflow-hidden sm:h-60 md:h-full">
+            <button
+              type="button"
+              onClick={() => open({ src, alt: project.name })}
+              aria-label={`View ${project.name} image full screen`}
+              className="relative block h-52 w-full cursor-zoom-in overflow-hidden text-left sm:h-60 md:h-full"
+            >
               {project.icon ? (
-                <div className="flex h-full w-full items-center justify-center bg-void-soft/50 p-8">
+                <span className="flex h-full w-full items-center justify-center bg-void-soft/50 p-8">
                   <img
-                    src={images[project.image]}
+                    src={src}
                     alt={`${project.name} app icon`}
                     loading="lazy"
                     className="h-36 w-36 rounded-2xl shadow-[0_12px_40px_rgb(0_0_0/0.5)] transition-transform duration-700 ease-out group-hover:scale-[1.06] sm:h-40 sm:w-40"
                   />
-                </div>
+                </span>
               ) : (
                 <>
                   <img
-                    src={images[project.image]}
+                    src={src}
                     alt={project.name}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
-                  <div
+                  <span
                     aria-hidden
                     className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-void-card/60"
                   />
                 </>
               )}
-            </div>
+            </button>
 
             <div className="p-6 md:p-7">
               <div className="mb-3 flex flex-wrap items-center gap-2">

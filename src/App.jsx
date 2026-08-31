@@ -8,23 +8,26 @@ import Experience from "./components/Experience";
 import Qualifications from "./components/Qualifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { LightboxProvider } from "./components/Lightbox";
 
 function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="relative min-h-screen overflow-x-clip bg-void text-white">
-        <AuroraBackground />
-        <CursorGlow />
-        <Nav />
-        <main className="relative z-10">
-          <Hero />
-          <About />
-          <Experience />
-          <Qualifications />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <LightboxProvider>
+        <div className="relative min-h-screen overflow-x-clip bg-void text-white">
+          <AuroraBackground />
+          <CursorGlow />
+          <Nav />
+          <main className="relative z-10">
+            <Hero />
+            <About />
+            <Experience />
+            <Qualifications />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </LightboxProvider>
     </MotionConfig>
   );
 }
