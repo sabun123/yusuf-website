@@ -1,8 +1,10 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { experience, pastProjects } from "../data/profile";
 import { images } from "../data/images";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import Tilt from "./Tilt";
+import TechIcon from "./TechIcon";
 
 function StackChips({ stack }) {
   return (
@@ -10,8 +12,9 @@ function StackChips({ stack }) {
       {stack.map((t) => (
         <span
           key={t}
-          className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-white/60"
+          className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-white/60"
         >
+          <TechIcon label={t} className="h-3.5 w-3.5" />
           {t}
         </span>
       ))}
@@ -89,22 +92,42 @@ function ProjectCard({ project, index }) {
         >
           <div className="grid md:grid-cols-[1fr_1.15fr]">
             <div className="relative h-52 overflow-hidden sm:h-60 md:h-full">
-              <img
-                src={images[project.image]}
-                alt={project.name}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              />
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-void-card/60"
-              />
+              {project.icon ? (
+                <div className="flex h-full w-full items-center justify-center bg-void-soft/50 p-8">
+                  <img
+                    src={images[project.image]}
+                    alt={`${project.name} app icon`}
+                    loading="lazy"
+                    className="h-36 w-36 rounded-2xl shadow-[0_12px_40px_rgb(0_0_0/0.5)] transition-transform duration-700 ease-out group-hover:scale-[1.06] sm:h-40 sm:w-40"
+                  />
+                </div>
+              ) : (
+                <>
+                  <img
+                    src={images[project.image]}
+                    alt={project.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-void-card/60"
+                  />
+                </>
+              )}
             </div>
 
             <div className="p-6 md:p-7">
-              <span className="mb-3 inline-block rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white/50">
-                {project.type}
-              </span>
+              <div className="mb-3 flex flex-wrap items-center gap-2">
+                <span className="inline-block rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white/50">
+                  {project.type}
+                </span>
+                {project.period && (
+                  <span className="inline-block rounded-full border border-neon-violet/30 bg-neon-violet/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-neon-violet">
+                    {project.period}
+                  </span>
+                )}
+              </div>
               <h3 className="font-display text-xl font-bold text-white md:text-2xl">
                 {project.name}
               </h3>
@@ -114,6 +137,17 @@ function ProjectCard({ project, index }) {
               <div className="mt-5">
                 <StackChips stack={project.stack} />
               </div>
+              {project.link && (
+                <a
+                  href={project.link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-neon-cyan transition-colors hover:text-white"
+                >
+                  <FaExternalLinkAlt className="h-3.5 w-3.5" />
+                  {project.link.label}
+                </a>
+              )}
             </div>
           </div>
         </Tilt>
@@ -133,7 +167,7 @@ export default function Experience() {
               Where I've <span className="text-gradient">been</span>
             </>
           }
-          sub="2025 to present, and the projects that got me here."
+          sub="From 2014 to present — the roles and projects that got me here."
         />
 
         <div className="relative">
