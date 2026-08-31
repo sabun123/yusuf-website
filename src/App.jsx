@@ -1,18 +1,13 @@
-import TopNav from "./components/topnav";
-import BottomNav from "./components/bottomnav";
-import ShowCase from "./components/showcase";
-import ToolShowCase from "./components/toolshowcase";
-
 function App() {
   return (
-    <main className="flex flex-col w-full h-screen bg-base-100">
-      <TopNav />
-      <div className="flex flex-col mt-15">
-        <ShowCase />
-        <ToolShowCase />
+    <main className="relative min-h-screen bg-void text-white">
+      <div className="flex min-h-screen items-center justify-center">
+        <p className="font-display text-2xl tracking-wide text-white/40">
+          Loading the future…
+        </p>
       </div>
-      <BottomNav />
     </main>
   );
 }
+
 export default App;

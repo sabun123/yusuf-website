@@ -94,3 +94,6 @@ build
 
 # Vite build directory
 dist/
+# Local npm cache (sandbox environments)
+.npm-ws-cache/
+.review-cache/
