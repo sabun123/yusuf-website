@@ -1,24 +1,31 @@
+import { MotionConfig } from "motion/react";
 import AuroraBackground from "./components/AuroraBackground";
 import CursorGlow from "./components/CursorGlow";
 import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Qualifications from "./components/Qualifications";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-void text-white">
-      <AuroraBackground />
-      <CursorGlow />
-      <Nav />
-      <main className="relative z-10">
-        <section
-          id="home"
-          className="flex min-h-screen items-center justify-center px-6"
-        >
-          <h1 className="text-gradient-animated font-display text-5xl font-bold md:text-7xl">
-            Yusuf Ismail
-          </h1>
-        </section>
-      </main>
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="relative min-h-screen overflow-x-clip bg-void text-white">
+        <AuroraBackground />
+        <CursorGlow />
+        <Nav />
+        <main className="relative z-10">
+          <Hero />
+          <About />
+          <Experience />
+          <Qualifications />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 }
 
