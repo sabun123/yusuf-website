@@ -9,7 +9,7 @@ export const profile = {
   greeting: "Hola! 👋 I'm",
   // Rotates in the hero. First entry is the current role.
   roles: ["AI Developer", "Full Stack Engineer", "Senior Software Engineer"],
-  tagline: "Constructor of mobile & web experiences",
+  tagline: "Building agentic AI solutions & modern mobile/web experiences",
   bio: "A mixed coder (half Malaysian, half Australian). Venturing the world and life in search of new technology and the next big advancement for mankind. Always hungry to learn new tech, and climb the ever eternal growth ladder. What's life if not an adventure into the constant unknown!",
   highlights: [
     "AI",
@@ -152,9 +152,19 @@ export const qualifications = [
       href: "https://www.credly.com/badges/df5cced7-d9dd-475e-8809-fd98727263d8",
     },
   },
-  { id: "aws", title: "AWS", image: "aws" },
+  {
+    id: "aws",
+    title: "AWS",
+    period: "Dec 2, 2021 — Dec 2, 2024",
+    image: "aws",
+  },
   { id: "hadoop", title: "Hadoop", image: "hadoop" },
-  { id: "degree", title: "Degree", image: "degree" },
+  {
+    id: "degree",
+    title: "MMU Degree",
+    period: "Dec 18, 2014",
+    image: "degree",
+  },
 ];
 
 // ─── Socials / contact ───────────────────────────────────────────────────────
