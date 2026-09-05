@@ -1,5 +1,9 @@
 # Yusuf's Portfolio website! 🌐
 
+[![AWS Certified](docs/badges/aws.svg)](https://aws.amazon.com/certification/)
+[![Azure](docs/badges/azure.svg)](https://azure.microsoft.com/)
+[![NVIDIA Certified](docs/badges/nvidia.svg)](https://www.credly.com/badges/df5cced7-d9dd-475e-8809-fd98727263d8)
+
 Hey there 👋
 This is the repo that holds Yusuf Ismail bin Shukor's personal portfolio website code.
 
@@ -24,17 +28,24 @@ updates — no need to dig through components.
 
 ## How to deploy to Github Pages 🚀
 
-First merge your work into the `main` branch, then run the following commands
-locally:
+Deployment is fully automated via GitHub Actions
+(`.github/workflows/deploy.yml`):
 
-1. `npm run predeploy`
-2. `npm run deploy`
+- Open a **PR** → the workflow runs a build check on it (no deploy)
+- **Merge to `main`** → the workflow builds and deploys to GitHub Pages.
+  Done!
 
-Done!
+The site lives at `https://yusuf-ismail-shukor.com` (custom domain, wired up
+via `public/CNAME`) and takes a minute or two to go live.
 
-- Make sure you've setup your SSH key locally to succeed.
-- The site lives at `https://yusuf-ismail-shukor.com` (custom domain, wired
-  up via `public/CNAME`) and takes a minute or two to go live on GitHub Pages.
+**One-time setup**: repo Settings → Pages → "Build and deployment" →
+Source: switch to **GitHub Actions** (was "Deploy from a branch"). Until
+this is switched, the workflow's deploy step will fail — the rest works
+regardless.
+
+> Manual fallback (if you ever need it): merge to `main`, then run
+> `npm run predeploy` and `npm run deploy` locally (requires your SSH key
+> set up; the old `gh-pages` branch is now unused).
 
 ## Website update in September 2026 🔥
 
