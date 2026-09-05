@@ -158,7 +158,12 @@ export const qualifications = [
     period: "Dec 2, 2021 — Dec 2, 2024",
     image: "aws",
   },
-  { id: "hadoop", title: "Hadoop", image: "hadoop" },
+  {
+    id: "hadoop",
+    title: "Hadoop",
+    period: "May 18, 2017",
+    image: "hadoop",
+  },
   {
     id: "degree",
     title: "MMU Degree",
@@ -192,16 +197,19 @@ export const socials = [
     label: "Blog",
     handle: "techpromad",
     href: "https://techpromad.wordpress.com/",
-    contact: false, // hidden in the contact section (still in hero/footer)
+    minor: true, // hidden from hero + contact (footer only)
   },
   {
     id: "youtube",
     label: "YouTube",
     handle: "Penguin Recordings",
     href: "https://www.youtube.com/c/PenguinRecordings/featured",
-    contact: false, // hidden in the contact section (still in hero/footer)
+    minor: true, // hidden from hero + contact (footer only)
   },
 ];
+
+// Socials for the hero + contact sections (minor ones stay in the footer)
+export const primarySocials = socials.filter((s) => !s.minor);
 
 // ─── Navigation ──────────────────────────────────────────────────────────────
 export const navItems = [

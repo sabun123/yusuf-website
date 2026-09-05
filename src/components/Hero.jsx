@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { profile, socials } from "../data/profile";
+import { profile, primarySocials } from "../data/profile";
 import { images } from "../data/images";
 import Magnetic from "./Magnetic";
 import { socialIcons } from "./socialIcons";
@@ -122,7 +122,7 @@ export default function Hero() {
             variants={item}
             className="mt-9 flex items-center justify-center gap-3 lg:justify-start"
           >
-            {socials.map((s) => {
+            {primarySocials.map((s) => {
               const Icon = socialIcons[s.id];
               return (
                 <a

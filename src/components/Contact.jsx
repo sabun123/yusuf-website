@@ -1,11 +1,11 @@
-import { socials } from "../data/profile";
+import { primarySocials } from "../data/profile";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { socialIcons } from "./socialIcons";
 
 export default function Contact() {
-  // Blog & YouTube stay on the hero/footer, but out of the contact section
-  const contactSocials = socials.filter((s) => s.contact !== false);
+  // Blog & YouTube are footer-only (see `minor` flag in profile.js)
+  const contactSocials = primarySocials;
 
   return (
     <section id="contact" className="relative px-6 py-24 md:py-32">
