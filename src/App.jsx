@@ -1,25 +1,35 @@
-import Header from './components/header/header';
-import Home from './components/home/home';
-import About from './components/about/about';
-import Contact from './components/contact/contact';
-import Navbar from './components/nav/nav';
-import Work from './components/work/work';
-import Footer from './components/footer/footer';
+import { MotionConfig } from "motion/react";
+import AuroraBackground from "./components/AuroraBackground";
+import CursorGlow from "./components/CursorGlow";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Qualifications from "./components/Qualifications";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import { LightboxProvider } from "./components/Lightbox";
 
-function WebContent() {
+function App() {
   return (
-    <>
-      <div className='bg-circle1'></div>
-      <div className='bg-circle2'></div>
-      <Header />
-      <Navbar />
-      <Home />
-
-      <Work />
-      <About />
-      <Contact />
-      <Footer />
-    </>
+    <MotionConfig reducedMotion="user">
+      <LightboxProvider>
+        <div className="relative min-h-screen overflow-x-clip bg-void text-white">
+          <AuroraBackground />
+          <CursorGlow />
+          <Nav />
+          <main className="relative z-10">
+            <Hero />
+            <About />
+            <Experience />
+            <Qualifications />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </LightboxProvider>
+    </MotionConfig>
   );
 }
-export default WebContent;
+
+export default App;
